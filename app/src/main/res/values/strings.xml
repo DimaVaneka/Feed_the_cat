@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string name="first_text">Satiety :</string>
+    <string name="share">Share it</string>
+    <string name="developer">About the developer</string>
+
+</resources>
