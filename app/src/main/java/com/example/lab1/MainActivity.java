@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         //reset = findViewById(R.id.reset);
 
         count.setText(count.getText().toString().concat(Integer.toString(i)));
+
+        main_btn.setTextColor(Color.parseColor("#FFFFFF"));
 
         main_btn.setOnClickListener(new View.OnClickListener() {
             @Override
