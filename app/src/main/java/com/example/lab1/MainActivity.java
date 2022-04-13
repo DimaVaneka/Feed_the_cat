@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView count;
     private Button main_btn;
     private ImageView reset;
+    private Animation animation;
     Date currentDate;
 
 
@@ -52,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
                 i++;
                 count.setText("Satiety : " + i);
                 if ((i != 0) && (i % 15 == 0)) {
-                    cat.setRotation(cat.getRotation() + 180);
+                    animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.myrotate);
+                    cat.startAnimation(animation);
                 }
             }
         });
